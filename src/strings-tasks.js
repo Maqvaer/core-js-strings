@@ -464,20 +464,8 @@ function unbracketTag(str) {
  *   ],
  *   'info@gmail.com' => ['info@gmail.com']
  */
-function extractEmails(str) {
-  const newStr = str.split(';');
-  for (let i = 0; i < newStr.length; ) {
-    newStr[i] = newStr[i].trim();
-    if (i > 0) {
-      newStr[i] = `,
-      ${newStr[i]}`;
-    }
-    newStr[0] = `${newStr[0]}`;
-    i += 1;
-  }
-  return `[
-  ${newStr.join('')}
-  ]`;
+function extractEmails(/* str */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -496,7 +484,7 @@ function extractEmails(str) {
  *    => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
  *
  */
-function encodeToRot13(str) {
+function encodeToRot13(/* str */) {
   throw new Error('Not implemented');
 }
 
